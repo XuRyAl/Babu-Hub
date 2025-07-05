@@ -1,0 +1,108 @@
+-- Babu Hub — Исправленный, рабочий, без ошибок setText!
+local DrRay = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRay:Load("Babu Hub", "Cherry")
+
+local tabUNI   = DrRay.newTab("UNI", "rbxassetid://0")
+local tabSHOOT = DrRay.newTab("SHOOT", "rbxassetid://0")
+local tabSIM   = DrRay.newTab("SIM", "rbxassetid://0")
+local tabOTH   = DrRay.newTab("OTH", "rbxassetid://0")
+local tabSETTINGS = DrRay.newTab("Settings", "rbxassetid://0")
+
+-- Исправленный logLabel!
+local logLabel = tabUNI.newLabel("Log: ..")
+local function setLog(msg)
+    if logLabel and msg then
+        logLabel.Text = "Log: " .. tostring(msg):sub(1, 100)
+    end
+end
+
+tabUNI.newButton("🌀 Toggle UI", "Скрыть/показать окно (V)", function()
+    window:Toggle()
+end)
+
+local function SafeLoadScript(url, name)
+    setLog("Загрузка: " .. name)
+    local success, err = pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+    if success then
+        setLog("✅ " .. name .. " успешно запущен!")
+    else
+        setLog("❌ " .. name .. " ошибка запуска: " .. tostring(err))
+    end
+end
+
+local scripts = {
+    -- UNI
+    {tab=tabUNI, name="Inf Yield", url="https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"},
+    {tab=tabUNI, name="Invisible GUI", url="https://pastebin.com/raw/F28KxpmH"},
+    {tab=tabUNI, name="Fly GUI", url="https://pastebin.com/raw/7f3ruMJV"},
+    {tab=tabUNI, name="Rifton Hub", url="https://rifton.top/loader.lua"},
+    {tab=tabUNI, name="TXT God Mode", url="https://rawscripts.net/raw/Universal-Script-TXT-God-43319"},
+    {tab=tabUNI, name="Supah Epik Dancez", url="https://rawscripts.net/raw/Universal-Script-Supah-epik-dancez-use-a-reanimation-first-43317"},
+    {tab=tabUNI, name="Fenorik Hub", url="https://raw.githubusercontent.com/Fenorik/FenorikHub/refs/heads/main/FenorikHubINIT.lua"},
+    {tab=tabUNI, name="Anti-Scam", url="https://raw.githubusercontent.com/juywvm/Zerath/refs/heads/main/Anti-Scam-Universal/loader.lua"},
+    {tab=tabUNI, name="Paid ServerSide", url="https://rawscripts.net/raw/Universal-Script-PAID-EXEC-ONLY-0DAY-ROBLOX-SERVERSIDED-EXECUTION-33412"},
+    {tab=tabUNI, name="Remote Spy", url="https://rawscripts.net/raw/Universal-Script-Remote-Spy-for-Synapse-Z-Wave-Celery-Electron-Solara-17005"},
+    {tab=tabUNI, name="Solara Hub", url="https://raw.githubusercontent.com/samuraa1/Solara-Hub/refs/heads/main/Solara%20Hub.lua"},
+    {tab=tabUNI, name="Epic Hub", url="https://raw.githubusercontent.com/VanPotent/EpicHub/refs/heads/main/loader.lua"},
+    {tab=tabUNI, name="Moneystrike", url="https://rawscripts.net/raw/Universal-Script-moneystrike-37108"},
+    {tab=tabUNI, name="Lock On OP", url="https://rawscripts.net/raw/Universal-Script-Lock-On-OP-43319"},
+    {tab=tabUNI, name="Lobotomy Script", url="https://rawscripts.net/raw/Universal-Script-Universal-Lobotomy-Script-43321"},
+    {tab=tabUNI, name="Lightclash", url="https://rawscripts.net/raw/Universal-Script-lightclash-37109"},
+    {tab=tabUNI, name="Kratos Script", url="https://rawscripts.net/raw/Universal-Script-kratos-script-32763"},
+    {tab=tabUNI, name="Nicuse Hub", url="https://rawscripts.net/raw/Universal-Script-Nicuse-Scripts-10-Games-43136"},
+    {tab=tabUNI, name="Aimbot OpenSrc", url="https://rawscripts.net/raw/Universal-Script-aimbot-open-source-43301"},
+    {tab=tabUNI, name="Forge Hub", url="https://rawscripts.net/raw/Universal-Script-Forge-Hub-41461"},
+    {tab=tabUNI, name="Code Hub", url="https://rawscripts.net/raw/Universal-Script-Code-Hub-8-Supported-Games-43287"},
+    {tab=tabUNI, name="FE Baldi Script", url="https://rawscripts.net/raw/Universal-Script-Fe-baldi-script-43282"},
+    -- SHOOT
+    {tab=tabSHOOT, name="Counter Blox Admin", url="https://raw.githubusercontent.com/ege90002/IconicAdmin/main/CounterBlox"},
+    {tab=tabSHOOT, name="TSB Combo Macro", url="https://pastebin.com/93seX6mb"},
+    {tab=tabSHOOT, name="KAT Silent Aim", url="https://pastefy.app/Gm9tUq6T/raw"},
+    {tab=tabSHOOT, name="KAT Yousuck", url="https://raw.githubusercontent.com/Yousuck780/KAT-new/main/wow"},
+    {tab=tabSHOOT, name="Prison Life Admin", url="https://pastebin.com/raw/L3AtTnPs"},
+    {tab=tabSHOOT, name="RIVALS Aimbot", url="https://rawscripts.net/raw/RIVALS-SCRIPT-AIMBOT-SILENT-AIM-ESP-KILL-ALL-38574"},
+    {tab=tabSHOOT, name="TSB Vinq Hub", url="https://rawscripts.net/raw/The-Strongest-Battlegrounds-Vinq-Hub-TSB-43322"},
+    {tab=tabSHOOT, name="Murder vs Sheriffs", url="https://rawscripts.net/raw/Murderers-vs.-Sheriffs-Murder-vs-Sheriffs-43324"},
+    {tab=tabSHOOT, name="Prison Life GUI", url="https://rawscripts.net/raw/Universal-Script-Prison-life-gui-43333"},
+    -- SIM
+    {tab=tabSIM, name="Build Boat AutoFarm", url="https://rawscripts.net/raw/Build-A-Boat-For-Treasure-Ultimte-B3BFT-Script-28601"},
+    {tab=tabSIM, name="Build Boat BumaPro", url="https://pastebin.com/raw/spPh8wmB"},
+    -- OTH
+    {tab=tabOTH, name="Blox Fruits Vertex", url="https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"},
+    {tab=tabOTH, name="Grow Garden NatHub", url="https://raw.githubusercontent.com/greywaterstill/GAG/refs/heads/main/nathub.lua"},
+    {tab=tabOTH, name="Dead Rails SpiderX", url="https://raw.githubusercontent.com/SpiderScriptRB/Sta1kerH1ck-/refs/heads/main/Dead%20Rails%20SpiderXHub.txt"},
+    {tab=tabOTH, name="Brookhaven Premium", url="https://pastebin.com/raw/LCmR8qkj"},
+    {tab=tabOTH, name="MM2 Aether Hub", url="https://raw.githubusercontent.com/vzyxer/Aether-Hub-Global-Roblox-Script-Hub/refs/heads/main/Murder%20Mystery%202"},
+    {tab=tabOTH, name="Grow Garden Lunar", url="https://raw.githubusercontent.com/gumanba/Scripts/main/GrowaGarden"},
+    {tab=tabOTH, name="Slap Battles Giang", url="https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"},
+    {tab=tabOTH, name="Eat World Kenniel", url="https://raw.githubusercontent.com/Kenniel123/Eat-the-World-script/main/Eat%20the%20world%20Script"},
+    {tab=tabOTH, name="DOORS Entity ESP", url="https://pastebin.com/raw/8jBE4Nip"},
+    {tab=tabOTH, name="99 Nights XVC", url="https://raw.githubusercontent.com/XVCHub/Games/main/99NightsintheForest"},
+    {tab=tabOTH, name="DOORS Floor2", url="https://rawscripts.net/raw/DOORS-Doors-floor2-ambient-43317"},
+    {tab=tabOTH, name="Brookhaven IceHub", url="https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"},
+    {tab=tabOTH, name="Troll Pinning Dexter", url="https://rawscripts.net/raw/Troll-is-a-pinning-tower-2-Dexter-OP-FE-Script-Kill-All-Auto-41754"},
+    {tab=tabOTH, name="Chess Club BOT", url="https://rawscripts.net/raw/Chess-Club-UPDATE-Auto-Chess-BOT-OPEN-SOURCE-KEYLESS-38511"},
+    {tab=tabOTH, name="Steal Brainrot Neox", url="https://rawscripts.net/raw/Steal-a-Brainrot-Neox-Hub-New-Script-With-Many-Features-43091"},
+    {tab=tabOTH, name="Ink Game LoxForge", url="https://rawscripts.net/raw/RELEASE-Ink-Game-LoxForgeUI-43323"},
+    {tab=tabOTH, name="Dead Rails Alpha", url="https://rawscripts.net/raw/Dead-Rails-Alpha-GUI-AUTOBOND-AUTO-WIN-FLY-BRING-ETC-43113"},
+    {tab=tabOTH, name="Blox Fruits Flow", url="https://rawscripts.net/raw/Blox-Fruits-Flow-fruit-26743"},
+    {tab=tabOTH, name="Grow Garden Neox", url="https://rawscripts.net/raw/Grow-a-Garden-Neox-Hub-41972"},
+    {tab=tabOTH, name="Slap Battles Aura", url="https://rawscripts.net/raw/UPDATE-Slap-Battles-Slap-aura-OP-script-43368"},
+}
+
+for _, script in ipairs(scripts) do
+    script.tab.newButton(
+        script.name,
+        "Запустить " .. script.name,
+        function()
+            SafeLoadScript(script.url, script.name)
+        end
+    )
+end
+
+tabSETTINGS.newButton("💾 Save Settings", "Сохранить настройки (ничего не делает)", function()
+    setLog("Сохранил настройки (фиктивно)")
+end)
+tabSETTINGS.newLabel("Made with ❤️ by XuRyAl & Copilot")
