@@ -2,11 +2,11 @@
 local DrRay = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 local window = DrRay:Load("Babu Hub", "Cherry")
 
-local tabUNI   = DrRay.newTab("UNI", "rbxassetid://0")
-local tabSHOOT = DrRay.newTab("SHOOT", "rbxassetid://0")
-local tabSIM   = DrRay.newTab("SIM", "rbxassetid://0")
-local tabOTH   = DrRay.newTab("OTH", "rbxassetid://0")
-local tabSETTINGS = DrRay.newTab("Settings", "rbxassetid://0")
+local tabUNI   = DrRay.newTab("UNI", "rbxassetid://110300231453334")
+local tabSHOOT = DrRay.newTab("SHOOT", "rbxassetid://110888290899912")
+local tabSIM   = DrRay.newTab("SIM", "rbxassetid://120766720077057")
+local tabOTH   = DrRay.newTab("OTH", "rbxassetid://88809693024609")
+local tabSETTINGS = DrRay.newTab("Settings", "rbxassetid://140493432158931")
 
 -- Исправленный logLabel!
 local logLabel = tabUNI.newLabel("Log: ..")
