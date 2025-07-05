@@ -57,6 +57,7 @@ local scripts = {
     {tab=tabUNI, name="Code Hub", url="https://rawscripts.net/raw/Universal-Script-Code-Hub-8-Supported-Games-43287"},
     {tab=tabUNI, name="FE Baldi Script", url="https://rawscripts.net/raw/Universal-Script-Fe-baldi-script-43282"},
     -- SHOOT
+    {tab=tabSHOOT, name="LUCKYBLOCK BATTLEGROUND", url="https://raw.githubusercontent.com/VanPotent/EpicHub/refs/heads/main/loader.lua"},
     {tab=tabSHOOT, name="Counter Blox Admin", url="https://raw.githubusercontent.com/ege90002/IconicAdmin/main/CounterBlox"},
     {tab=tabSHOOT, name="TSB Combo Macro", url="https://pastebin.com/93seX6mb"},
     {tab=tabSHOOT, name="KAT Silent Aim", url="https://pastefy.app/Gm9tUq6T/raw"},
