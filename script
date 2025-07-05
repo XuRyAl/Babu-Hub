@@ -1,5 +1,5 @@
 -- Babu Hub — Исправленный, рабочий, без ошибок setText!
-local DrRay = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local DrRay = loadstring(game:HttpGet("https://raw.githubusercontent.com/XuRyAl/-CopyRight-AZYsgithub-DrRay-ui-Library/refs/heads/main/DrRay%20Script"))()
 local window = DrRay:Load("Babu Hub", "Cherry")
 
 local tabUNI   = DrRay.newTab("UNI", "rbxassetid://110300231453334")
